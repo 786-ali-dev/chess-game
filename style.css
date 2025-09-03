@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2c3e50; /* Dark blue-gray */
+    color: #ecf0f1; /* Light gray */
+}
+
+.game-container {
+    background-color: #34495e; /* Slightly lighter blue-gray */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    color: #f1c40f; /* Yellow */
+    margin-bottom: 25px;
+    font-size: 2.5em;
+}
+
+.chessboard {
+    display: grid;
+    grid-template-columns: repeat(8, 70px);
+    grid-template-rows: repeat(8, 70px);
+    width: 560px; /* 8 * 70px */
+    height: 560px; /* 8 * 70px */
+    border: 5px solid #bdc3c7; /* Silver border */
+    margin: 0 auto 30px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.square {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    position: relative;
+}
+
+.white {
+    background-color: #ecf0f1; /* Off-white */
+}
+
+.black {
+    background-color: #7f8c8d; /* Darker gray */
+}
+
+.square img {
+    width: 60px;
+    height: 60px;
+    user-select: none;
+    pointer-events: none; /* Prevent image drag */
+}
+
+.selected {
+    background-color: #3498db !important; /* Blue for selected */
+    box-shadow: inset 0 0 0 3px #2980b9;
+}
+
+.possible-move {
+    background-color: #2ecc71 !important; /* Green for possible moves */
+    box-shadow: inset 0 0 0 3px #27ae60;
+}
+
+.game-info {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+#current-turn {
+    font-weight: bold;
+    color: #f1c40f;
+}
+
+#reset-button {
+    background-color: #e74c3c; /* Red */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+#reset-button:hover {
+    background-color: #c0392b; /* Darker red */
+    transform: translateY(-2px);
+}
+
+#reset-button:active {
+    transform: translateY(0);
+}
